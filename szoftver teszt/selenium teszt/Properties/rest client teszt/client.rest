@@ -1,0 +1,56 @@
+//Adatbázis parancsok és lekérdezés funkciók, amelyek Frontend nélkül is működnek a létrehozott végpontok alapján
+//Ezek a parancsok egyben tesztként is szolgálnak a Backend programon belül
+
+//Szerver elérési címe
+GET http://localhost:8000/
+
+
+//Összes becenév listázása
+###
+GET http://localhost:8000/becenevek
+
+
+//Összes munkavállaló listázása
+###
+GET http://localhost:8000/munkavallalok
+
+
+//Összes dolgozó listázása
+###
+GET http://localhost:8000/dolgozok
+
+
+//Új becenév létrehozása
+###
+POST http://localhost:8000/ujbecenev
+Content-Type: application/json
+
+{
+    "becenev":"Jankó"
+}
+
+
+//Egy kiválasztott becenév módosítása
+###
+PATCH http://localhost:8000/modositbecenev
+Content-Type: application/json
+
+{
+    "id":1,
+    "becenev":"Laca"
+}
+
+
+//Egy kiválasztott becenév törlése
+###
+DELETE http://localhost:8000/torolbecenev
+Content-Type: application/json
+
+{
+    "id":4
+}
+
+
+//Összes eléhetőség listázása
+###
+GET http://localhost:8000/elerhetoseg
